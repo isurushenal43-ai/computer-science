@@ -1,0 +1,111 @@
+
+
+"""orders = []
+
+def add_order():
+    order_id = input("Enter Order ID: ")
+    customer_name = input("Enter Customer Name: ")
+    food_item = input("Enter Food Item: ")
+    amount = float(input("Enter Amount: "))
+
+    order = {
+        "id": order_id,
+        "customer": customer_name,
+        "food": food_item,
+        "amount": amount,
+        "status": "Pending"
+    }
+
+    orders.append(order)
+    print("Order added successfully!")
+
+def view_orders():
+    if len(orders) == 0:
+        print("No orders available.")
+    else:
+        for order in orders:
+            print("\n-------------------")
+            print("Order ID:", order["id"])
+            print("Customer Name:", order["customer"])
+            print("Food Item:", order["food"])
+            print("Amount:", order["amount"])
+            print("Status:", order["status"])
+
+def search_order():
+    search_id = input("Enter Order ID to search: ")
+
+    for order in orders:
+        if order["id"] == search_id:
+            print("\nOrder Found")
+            print(order)
+            return
+
+    print("Order not found.")
+
+def update_order_status():
+    order_id = input("Enter Order ID: ")
+
+    for order in orders:
+        if order["id"] == order_id:
+            order["status"] = "Completed"
+            print("Order status updated.")
+            return
+
+    print("Order not found.")
+
+def calculate_total_sales():
+    total = 0
+
+    for order in orders:
+        total += order["amount"]
+
+    print("Total Sales =", total)
+
+def count_completed_orders():
+    count = 0
+
+    for order in orders:
+        if order["status"] == "Completed":
+            count += 1
+
+    print("Completed Orders =", count)
+
+while True:
+
+    print("\n===== Restaurant Ordering System =====")
+    print("1. Add Order")
+    print("2. View Orders")
+    print("3. Search Order")
+    print("4. Update Order Status")
+    print("5. Calculate Total Sales")
+    print("6. Count Completed Orders")
+    print("7. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        add_order()
+
+    elif choice == "2":
+        view_orders()
+
+    elif choice == "3":
+        search_order()
+
+    elif choice == "4":
+        update_order_status()
+
+    elif choice == "5":
+        calculate_total_sales()
+
+    elif choice == "6":
+        count_completed_orders()
+
+    elif choice == "7":
+        print("Thank you!")
+        break
+
+    else:
+        print("Invalid choice. Try again.")
+        
+"""
